@@ -1,0 +1,23 @@
+spring:
+  rabbitmq:
+    host: 101.201.47.132
+    port: 5672
+    username: fadai
+    password: '031027'
+    listener:
+      type: simple
+      simple:
+          #消费者ack模式
+          #NONE模式，则只要收到消息后就立即确认（消息出列，标记已消费），有丢失数据的风险
+          #AUTO模式，看情况确认，如果此时消费者抛出异常则消息会返回到队列中
+          #MANUAL模式，需要显式的调用当前channel的basicAck方法
+          acknowledge-mode: auto
+  application:
+    name: messageQueue
+  data:
+    redis:
+      port: 6379
+      host: 101.201.47.132
+      password: '031027'
+server:
+  port: 8086
