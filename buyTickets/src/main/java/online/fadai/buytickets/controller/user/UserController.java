@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("user")
-//@CrossOrigin(origins = "/*")
+@CrossOrigin(origins = "/*")
 public class UserController {
     @Resource
     private TicketSalesService ticketSalesService;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("account")
-//@CrossOrigin(origins = "/*")
+@CrossOrigin(origins = "/*")
 public class AccountController {
     @Resource
     private AccountService accountService;
